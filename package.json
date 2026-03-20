@@ -1,18 +1,20 @@
 ﻿{
-  "name": "modulo-6-backend-base",
-  "version": "1.0.0",
-  "description": "Base backend con Node.js y Express, arquitectura modular y persistencia en archivos planos.",
+  "name": "modulo-7-backend-datos",
+  "version": "2.0.0",
+  "description": "Backend modular Node.js + Express + PostgreSQL + Sequelize (Modulo 7)",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "db:sync": "node src/scripts/sync-db.js",
+    "db:seed": "node src/scripts/seed.js"
   },
   "keywords": [
     "nodejs",
     "express",
-    "backend",
-    "modular",
-    "academic"
+    "postgresql",
+    "sequelize",
+    "crud"
   ],
   "author": "",
   "license": "MIT",
@@ -21,7 +23,10 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
